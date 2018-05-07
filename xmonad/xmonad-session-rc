@@ -1,0 +1,40 @@
+#!/bin/sh
+# Script to configure X, start common apps, and start xmonad.
+# Author: Vic Fryzel
+# https://github.com/vicfryzel/xmonad-config
+
+
+# Configure PATH so that we can access our scripts below
+PATH=$PATH:~/.cabal/bin:~/.xmonad/bin
+
+# Configure X
+xsetroot -cursor_name left_ptr &
+#xrdb -merge ~/.Xdefaults &
+#xmodmap ~/.xmodmap
+#setxkbmap -option "ctrl:nocaps" &
+
+
+
+# Start the system tray
+#killall trayer &
+trayer --edge top --align right --width 5 --height 18 --transparent true &
+
+# Start two terminals
+#termite &
+# Start a browser
+#opera &
+# Start my own programm
+~/wallpaper.sh &
+fcitx &
+keynav &
+nm-applet &
+#killall volumeicon &
+volumeicon &
+# Start screensaver
+#killall gnome-screensaver &
+#xscreensaver -no-splash &
+
+# Start sound server
+#pulseaudio --start --log-target=syslog &
+
+exec ck-launch-session dbus-launch --sh-syntax --exit-with-session xmonad

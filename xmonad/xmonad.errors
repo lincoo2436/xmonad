@@ -1,0 +1,59 @@
+
+xmonad.hs:106:13: warning: [-Wdeprecations]
+    In the use of ‘defaultTheme’
+    (imported from XMonad.Layout.Tabbed, but defined in XMonad.Layout.Decoration):
+    Deprecated: "Use def (from Data.Default, and re-exported by XMonad.Layout.Decoration) instead."
+    |
+106 | tabConfig = defaultTheme {
+    |             ^^^^^^^^^^^^
+
+xmonad.hs:129:14: warning: [-Wdeprecations]
+    In the use of ‘defaultXPConfig’ (imported from XMonad.Prompt):
+    Deprecated: "Use def (from Data.Default, and re-exported from XMonad.Prompt) instead."
+    |
+129 | myXPConfig = defaultXPConfig
+    |              ^^^^^^^^^^^^^^^
+
+xmonad.hs:209:77: warning: [-Woverflowed-literals]
+    Literal -50 is out of the GHC.Word.Word32 range 0..4294967295
+    |
+209 |  , ((modMask ,               xK_a     ), withFocused (keysAbsResizeWindow (-50 ,-50) (1,1)))
+    |                                                                             ^^
+
+xmonad.hs:209:82: warning: [-Woverflowed-literals]
+    Literal -50 is out of the GHC.Word.Word32 range 0..4294967295
+    |
+209 |  , ((modMask ,               xK_a     ), withFocused (keysAbsResizeWindow (-50 ,-50) (1,1)))
+    |                                                                                  ^^
+
+xmonad.hs:238:36: warning: [-Wdeprecations]
+    In the use of ‘defaultGSConfig’
+    (imported from XMonad.Actions.GridSelect):
+    Deprecated: "Use def (from Data.Default, and re-exported from XMonad.Actions.GridSelect) instead."
+    |
+238 |   , ((modMask, xK_x), goToSelected defaultGSConfig)
+    |                                    ^^^^^^^^^^^^^^^
+
+xmonad.hs:239:37: warning: [-Wdeprecations]
+    In the use of ‘defaultGSConfig’
+    (imported from XMonad.Actions.GridSelect):
+    Deprecated: "Use def (from Data.Default, and re-exported from XMonad.Actions.GridSelect) instead."
+    |
+239 |   , ((modMask, xK_s), spawnSelected defaultGSConfig ["termite -e mutt","termite -e ncmpc","termite -e ranger","termite -d ~/books","termite -d ~/edisk/慧智兴达"])
+    |                                     ^^^^^^^^^^^^^^^
+
+xmonad.hs:240:37: warning: [-Wdeprecations]
+    In the use of ‘defaultGSConfig’
+    (imported from XMonad.Actions.GridSelect):
+    Deprecated: "Use def (from Data.Default, and re-exported from XMonad.Actions.GridSelect) instead."
+    |
+240 |   , ((modMask, xK_g), spawnSelected defaultGSConfig ["thunar","thunderbird","wps","wpp","retext","FBReader","gimp","opera"])
+    |                                     ^^^^^^^^^^^^^^^
+
+xmonad.hs:377:12: warning: [-Wdeprecations]
+    In the use of ‘defaultConfig’
+    (imported from XMonad, but defined in XMonad.Config):
+    Deprecated: "Use def (from Data.Default, and re-exported by XMonad and XMonad.Config) instead."
+    |
+377 | defaults = defaultConfig {
+    |            ^^^^^^^^^^^^^
